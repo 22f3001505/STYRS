@@ -1,0 +1,11 @@
+# Add files that shall be ignored by Android Studio / Gradle
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties

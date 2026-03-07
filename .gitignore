@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+
+# Android build
+SolarCellDetector/build/
+SolarCellDetector/app/build/
+SolarCellDetector/.gradle/
+SolarCellDetector/.kotlin/
+SolarCellDetector/local.properties
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large model files (exceed GitHub's 100MB limit)
+# Download separately or use Git LFS
+best_model.keras
+hf_deploy/best_model.keras

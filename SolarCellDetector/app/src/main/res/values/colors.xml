@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base / Foundation Colors -->
+    <color name="bg_primary">#0F1115</color>
+    <color name="bg_surface">#161A22</color>
+    <color name="bg_elevated">#1C2230</color>
+    <color name="border_default">#22262F</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#A1A1AA</color>
+    <color name="text_disabled">#6B7280</color>
+    <color name="text_inverse">#0F1115</color>
+    
+    <!-- Brand / Accent Colors -->
+    <color name="brand_primary">#F4C430</color>
+    <color name="brand_secondary">#1F3C88</color>
+    <color name="brand_glow">#FFD166</color>
+    
+    <!-- ML Status & Classification Colors -->
+    <color name="status_healthy">#2ECC71</color>
+    <color name="status_warning">#F4A261</color>
+    <color name="status_critical">#E63946</color>
+    <color name="status_unknown">#6B7280</color>
+    
+    <!-- Legacy mappings for existing code -->
+    <color name="primary">@color/brand_primary</color>
+    <color name="primary_dark">#D4A420</color>
+    <color name="primary_light">@color/brand_glow</color>
+    <color name="accent">@color/brand_primary</color>
+    
+    <!-- Result Colors -->
+    <color name="good">@color/status_healthy</color>
+    <color name="good_light">#1A3D2A</color>
+    <color name="defective">@color/status_critical</color>
+    <color name="defective_light">#3D1A1E</color>
+    
+    <!-- Background Colors -->
+    <color name="background">@color/bg_primary</color>
+    <color name="surface">@color/bg_surface</color>
+    <color name="card_background">@color/bg_surface</color>
+    
+    <!-- Chart Colors -->
+    <color name="chart_grid">#2A2F3A</color>
+    <color name="chart_text">#E5E7EB</color>
+    
+    <!-- Divider -->
+    <color name="divider">@color/border_default</color>
+    
+    <!-- Overlay -->
+    <color name="overlay">#CC0F1115</color>
+    
+    <!-- Button Colors -->
+    <color name="button_primary_bg">@color/brand_primary</color>
+    <color name="button_primary_text">@color/text_inverse</color>
+    <color name="button_secondary_bg">#00000000</color>
+    <color name="button_secondary_border">@color/brand_secondary</color>
+    <color name="button_danger_bg">@color/status_critical</color>
+    
+    <!-- Text on primary (for yellow buttons) -->
+    <color name="text_on_primary">@color/text_inverse</color>
+</resources>

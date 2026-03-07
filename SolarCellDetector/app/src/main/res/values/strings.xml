@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">socell</string>
+    <string name="app_tagline">AI-Powered Solar Cell Inspector</string>
+    <string name="tap_to_select">Tap or select image to analyze solar cell quality</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="analyze">ANALYZE</string>
+    <string name="new_scan">NEW SCAN</string>
+    <string name="analysis_result">Analysis Result</string>
+    <string name="confidence">Confidence: %1$.1f%%</string>
+    <string name="probability_distribution">Probability Distribution</string>
+    <string name="good_label">Healthy</string>
+    <string name="defective_label">Defective</string>
+    <string name="loading">Analyzing solar cell…</string>
+    <string name="error_no_image">Please select an image first</string>
+    <string name="error_network">Network error. Check your connection and server URL in Settings.</string>
+    <string name="error_server">Server error. Please try again.</string>
+    <string name="version_label">v2.0 · Powered by Deep Learning</string>
+    <string name="recommendation_title">💡 RECOMMENDATION</string>
+    <string name="recommendation_good">This solar cell appears to be in good condition. No defects were detected by the AI model. You can proceed with standard quality assurance procedures.</string>
+    <string name="recommendation_defective">This solar cell shows signs of defects. It is recommended to inspect this cell manually and consider removing it from the production line to maintain quality standards.</string>
+</resources>

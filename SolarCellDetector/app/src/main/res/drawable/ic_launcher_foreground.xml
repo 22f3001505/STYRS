@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Solar Yellow Sun/Cell Icon -->
+    <group android:translateX="27" android:translateY="27">
+        <!-- Grid pattern representing solar cells -->
+        <path
+            android:fillColor="#F4C430"
+            android:pathData="M0,0 L54,0 L54,54 L0,54 Z"/>
+        
+        <!-- Grid lines -->
+        <path
+            android:strokeColor="#0F1115"
+            android:strokeWidth="2"
+            android:pathData="M18,0 L18,54 M36,0 L36,54 M0,18 L54,18 M0,36 L54,36"/>
+        
+        <!-- Defect indicator (small red cell) -->
+        <path
+            android:fillColor="#E63946"
+            android:pathData="M18,18 L36,18 L36,36 L18,36 Z"/>
+    </group>
+</vector>
