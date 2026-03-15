@@ -27,3 +27,4 @@ SolarCellDetector/local.properties
 # Download separately or use Git LFS
 best_model.keras
 hf_deploy/best_model.keras
+STYRS-main/
