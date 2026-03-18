@@ -231,6 +231,25 @@
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <!-- WhatsApp Support Button (only visible for Defective results) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWhatsApp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:text="Contact Support on WhatsApp"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:backgroundTint="#25D366"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_whatsapp"
+                app:iconGravity="textStart"
+                app:iconTint="@android:color/white"
+                app:iconSize="22dp"
+                android:visibility="gone" />
+
         </LinearLayout>
     </ScrollView>
 

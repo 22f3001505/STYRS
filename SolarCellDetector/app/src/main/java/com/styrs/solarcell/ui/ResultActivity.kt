@@ -1,12 +1,15 @@
 package com.styrs.solarcell.ui
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.AlphaAnimation
 import android.view.animation.AnimationSet
 import android.view.animation.ScaleAnimation
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import coil.load
@@ -105,6 +108,9 @@ class ResultActivity : AppCompatActivity() {
             binding.txtResultLabel.setTextColor(ContextCompat.getColor(this, R.color.status_critical))
             binding.txtRecommendation.text = getString(R.string.recommendation_defective)
             binding.txtRecommendation.setTextColor(ContextCompat.getColor(this, R.color.status_warning))
+
+            // Show WhatsApp support button for defective results
+            binding.btnWhatsApp.visibility = View.VISIBLE
         }
 
         // Display the overall confidence as a formatted percentage
@@ -190,6 +196,38 @@ class ResultActivity : AppCompatActivity() {
         binding.btnNewScan.setOnClickListener {
             finish()  // Close this activity → returns to MainActivity
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        }
+
+        // WhatsApp support button — opens WhatsApp with a pre-filled message
+        binding.btnWhatsApp.setOnClickListener {
+            openWhatsAppSupport()
+        }
+    }
+
+    // ─────────────────────────────────────────────
+    // WHATSAPP SUPPORT
+    // ─────────────────────────────────────────────
+
+    /**
+     * Open WhatsApp with a pre-filled message to the support phone number.
+     *
+     * Uses the wa.me deep link format which works regardless of whether
+     * the number is saved in the user's contacts. Falls back to a Toast
+     * message if WhatsApp is not installed.
+     */
+    private fun openWhatsAppSupport() {
+        val phoneNumber = "9392632756"  // Support phone number
+        val confidence = intent.getDoubleExtra(EXTRA_CONFIDENCE, 0.0)
+        val message = "Hello, I used the STYRS Solar Panel Inspector app " +
+                "and detected a defect (confidence: ${String.format("%.1f", confidence * 100)}%%). " +
+                "I need assistance with inspection and repair."
+
+        try {
+            val uri = Uri.parse("https://wa.me/$phoneNumber?text=${Uri.encode(message)}")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        } catch (e: Exception) {
+            Toast.makeText(this, "WhatsApp is not installed", Toast.LENGTH_SHORT).show()
         }
     }
 }
